@@ -5,7 +5,7 @@ nano-sm2
 
 SM2与ecc的区别主要在于曲线参数的选择不同，另外在签名，验签的过程中也有一点区别，SM2的官方文档以及官方推荐参数可以参考 http://www.oscca.gov.cn/News/201012/News_1197.htm 。
 
-Features
+Changes
 --------
 
 本代码主要在以下几方面对nano-ecc进行了改动：
