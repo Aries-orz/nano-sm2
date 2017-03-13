@@ -10,7 +10,7 @@ Features
 
 本代码主要在以下几方面对nano-ecc进行了改动：
 
- * 大数模运算 - nano-ecc在实现大数模乘的过程中，根据《Mathematical routines for the NIST prime elliptic curves》文档（https://koclab.cs.ucsb.edu/teaching/cren/docs/w02/nist-routines.pdf ）给出的方法，对模标准ecc参数p的运算进行了优化，故其模运算仅适用于标准ecc的曲线参数（nano-ecc这一部分代码也是参考的linux内核源码）。本代码根据其优化方法，实现了对256位SM2算法的推荐参数的算法优化，可以快速得到与SM2推荐参数p相关的模运算结果；
+ * 大数模运算 - nano-ecc在实现大数模运算的过程中，根据《Mathematical routines for the NIST prime elliptic curves》文档（https://koclab.cs.ucsb.edu/teaching/cren/docs/w02/nist-routines.pdf ）给出的方法，对模标准ecc参数p的运算进行了优化，故其模运算仅适用于标准ecc的曲线参数（nano-ecc这一部分代码也是参考的linux内核源码）。本代码根据其优化方法，实现了对256位SM2算法的推荐参数的算法优化，可以快速得到与SM2推荐参数p相关的模运算结果；
 
  * 签名过程 - 本代码完全按照SM2签名过程实现；
 
