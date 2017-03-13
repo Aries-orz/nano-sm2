@@ -1,4 +1,4 @@
-all: test_ecc
+all: test_sm2
 
 ecc.o: sm2.c sm2.h
 	$(CC) -c -o sm2.o sm2.c
@@ -6,8 +6,8 @@ ecc.o: sm2.c sm2.h
 %.o: %.c sm2.h
 	$(CC) -c $< -o $@
 
-test_ecc: test_ecc.o sm2.o
-	$(CC) -o test_ecc test_ecc.o sm2.o
+test_ecc: test_sm2.o sm2.o
+	$(CC) -o test_sm2 test_sm2.o sm2.o
 
 clean:
-	rm -f *.o test_ecc
+	rm -f *.o test_sm2
