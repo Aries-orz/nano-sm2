@@ -1,16 +1,16 @@
 default: makekeys
 all: default
 
-ecc.o: ../ecc.c ../ecc.h
-	gcc -g -o ecc.o -c ../ecc.c
+sm2.o: ../sm2.c ../sm2.h
+	gcc -g -o sm2.o -c ../sm2.c
 
-makekeys.o: makekeys.c ../ecc.h
+makekeys.o: makekeys.c ../sm2.h
 	gcc -I.. -g -o makekeys.o -c makekeys.c
 
-makekeys: ecc.o makekeys.o
-	gcc -o makekeys makekeys.o ecc.o
+makekeys: sm2.o makekeys.o
+	gcc -o makekeys makekeys.o sm2.o
 
 clean:
-	rm -f ecc.o makekeys.o makekeys
+	rm -f sm2.o makekeys.o makekeys
 
 .PHONY: default all clean

@@ -1,12 +1,12 @@
 all: test_sm2
 
-ecc.o: sm2.c sm2.h
+sm2.o: sm2.c sm2.h
 	$(CC) -c -o sm2.o sm2.c
 
 %.o: %.c sm2.h
 	$(CC) -c $< -o $@
 
-test_ecc: test_sm2.o sm2.o
+test_sm2: test_sm2.o sm2.o
 	$(CC) -o test_sm2 test_sm2.o sm2.o
 
 clean:

@@ -1,6 +1,6 @@
 #if !TARGET_LPC11XX
 
-#include "ecc.h"
+#include "sm2.h"
 
 #include <stdio.h>
 #include <string.h>
